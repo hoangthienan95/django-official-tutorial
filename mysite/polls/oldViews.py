@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-
+from __future__ import braces
 from django.shortcuts import render
 ### Added code
 from django.http import HttpResponse, Http404, HttpResponseRedirect
@@ -15,7 +15,7 @@ def index(request):
 	context = {
 		'latest_question_list': latest_question_list,
 	}
-	#output = ','.join([q.question_text for q in latest_question_list])
+	# output = ','.join([q.question_text for q in latest_question_list])
 	return render(request, 'polls/index.html',context)
 
 def detail(request, question_id):
